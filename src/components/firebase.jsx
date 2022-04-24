@@ -4,8 +4,6 @@ import { Calendar } from '@mantine/dates';
 import React, { useState } from "react";
 import { NewsFeeds } from "./trying";
 
-
-
 const firebaseConfig = {
     apiKey: "AIzaSyCz7bQHB_QnBLwtl1fPPPu7BonKQx45UWQ",
     authDomain: "newarchive-1804f.firebaseapp.com",
@@ -19,60 +17,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 const today = new Date();
-
-
-
-// class FetchDBnews extends React.Component {
-
-//     state = {
-//         loading: null,
-//         news: []
-//     }
-
-//     componentDidUpdate() {
-//         const date = this.props.setDate.toDateString()
-//         if (date !== null) {
-//             console.log(date)
-//         }
-//     }
-
-//     async componentDidMount() {
-//         const date = this.props.setDate.toDateString()
-//         const docRef = doc(db, "news", `${date}`);
-//         const docSnap = await getDoc(docRef);
-
-//         if (docSnap.exists()) {
-//             console.log("Document data:", docSnap.data().CNN);
-
-//             this.setState({ loading: false, news: docSnap.data().CNN })
-//         } else {
-//             // doc.data() will be undefined in this case
-//             console.log("No such document!");
-//         }
-//     }
-
-//     render() {
-//         if (this.state.loading) {
-//             return <div>Loading...</div>;
-//         }
-//         if (!this.state.news.length) {
-//             return <div>No news</div>
-//         }
-
-//         return (
-//             <div>
-//                 {this.state.news.map((news, index) => {
-//                     return (
-//                         <div key={index}>
-//                             <div>{news.headline}</div>
-//                             <img src={news.img} alt="news" />
-//                         </div>
-//                     )
-//                 })}
-//             </div>
-//         )
-//     }
-// }
 
 export const Cal = () => {
     const [value, setValue] = useState(today);
