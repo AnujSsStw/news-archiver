@@ -5,13 +5,13 @@ import React, { useState } from "react";
 import { NewsFeeds } from "./trying";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCz7bQHB_QnBLwtl1fPPPu7BonKQx45UWQ",
-    authDomain: "newarchive-1804f.firebaseapp.com",
-    projectId: "newarchive-1804f",
-    storageBucket: "newarchive-1804f.appspot.com",
-    messagingSenderId: "1044080316873",
-    appId: "1:1044080316873:web:86a6316a0c6abff0351818",
-    measurementId: "G-5BSDE1R0F1"
+    apiKey: process.env.apiKey,
+    authDomain: process.env.authDomain,
+    projectId: process.env.projectId,
+    storageBucket: process.env.storageBucket,
+    messagingSenderId: process.env.messagingSenderId,
+    appId: process.env.appId,
+    measurementId: process.env.measurementId
 };
 
 const app = initializeApp(firebaseConfig);
